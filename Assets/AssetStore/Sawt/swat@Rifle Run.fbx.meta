@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 5ea13183dbac84742ad2edc6ba89bb1d
 ModelImporter:
-  serializedVersion: 19300
+  serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: -203655887218126122
@@ -60,7 +60,93 @@ ModelImporter:
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: IKLeftFootWeight
+        curve:
+          serializedVersion: 2
+          curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.20762712
+            value: 0
+            inSlope: 0
+            outSlope: -0.39016885
+            tangentMode: 1
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.028061809
+          - serializedVersion: 3
+            time: 0.6872341
+            value: 0
+            inSlope: 0.45198566
+            outSlope: 0.0023868324
+            tangentMode: 1
+            weightedMode: 0
+            inWeight: 0.031947426
+            outWeight: 0.101944394
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 4
+      - name: IKRightFootWeight
+        curve:
+          serializedVersion: 2
+          curve:
+          - serializedVersion: 3
+            time: -0.00078582764
+            value: -0.050079346
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.17372881
+            value: 0
+            inSlope: 0.47651935
+            outSlope: 0
+            tangentMode: 1
+            weightedMode: 0
+            inWeight: 0.12594265
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.7669491
+            value: 0
+            inSlope: 0
+            outSlope: -0.4141531
+            tangentMode: 1
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.14586957
+          - serializedVersion: 3
+            time: 1
+            value: -0.050079346
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 4
       events: []
       transformMask: []
       maskType: 3
@@ -78,6 +164,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
