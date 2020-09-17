@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using Photon.Pun;
 
-
-public sealed class PlayerMovement : MonoBehaviour
+public sealed class PlayerMovement : MonoBehaviourPun
 {
     private const string HORIZONTAL = "Horizontal";
     private const string VERTICAL = "Vertical";
@@ -23,6 +23,9 @@ public sealed class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (_agent == null || !photonView.IsMine)
+            return;
+
         var timeDelta = Time.deltaTime;
         var horizontal = Input.GetAxis(HORIZONTAL);
         var vertical = Input.GetAxis(VERTICAL);
@@ -34,13 +37,16 @@ public sealed class PlayerMovement : MonoBehaviour
             _movement.Normalize();
         }
 
+        if (Mathf.Abs(_movement.magnitude) < 0.001f)
+            return;
+
         Vector3 targetDirection = _camera.transform.TransformDirection(_movement);
         targetDirection.y = 0.0f;
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x,
-            _camera.transform.localEulerAngles.y, transform.localEulerAngles.z);
+            _camera.transform.localEulerAngles.y + 10.0f, transform.localEulerAngles.z);
 
         _agent.Move(targetDirection * timeDelta);
-        _agent.SetDestination(transform.position +  targetDirection);
+        _agent.SetDestination(transform.position + targetDirection);
 
         _playerAnimation.SetMove(_movement);
     }

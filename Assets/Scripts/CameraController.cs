@@ -21,6 +21,7 @@ public sealed class CameraController : MonoBehaviour
 
 
     [Space(5), Header("RotationCamera")]
+    public bool rotationYEnabled = true;
     [SerializeField] private float _distance = 2.0f;
     [SerializeField] private float _height = 1.5f;
 
@@ -62,14 +63,21 @@ public sealed class CameraController : MonoBehaviour
 
     private void RotationCamera()
     {
+        if (_target == null)
+            return;
+
         transform.RotateAround(_target.position, Vector3.up, Input.GetAxis(MOUSE_X) * _sensitivity);
 
         Vector3 position = _target.position - (transform.rotation * Vector3.forward * _distance);
         position = position + (transform.rotation * Vector3.right * _offsetPosition);
         position = new Vector3(position.x, _target.position.y + _height, position.z);
 
-        _rotationY += Input.GetAxis(MOUSE_Y) * _sensitivity;
-        _rotationY = Mathf.Clamp(_rotationY, -Mathf.Abs(_minY), Mathf.Abs(_maxY));
+        if (rotationYEnabled) {
+            _rotationY += Input.GetAxis(MOUSE_Y) * _sensitivity;
+            _rotationY = Mathf.Clamp(_rotationY, -Mathf.Abs(_minY), Mathf.Abs(_maxY));
+        } else {
+            _rotationY = -Mathf.Abs(_minY);
+        }
         transform.localEulerAngles = new Vector3(_rotationY, transform.localEulerAngles.y, 0);
 
         transform.position = Vector3.Lerp(transform.position, position, _speed * Time.deltaTime);
