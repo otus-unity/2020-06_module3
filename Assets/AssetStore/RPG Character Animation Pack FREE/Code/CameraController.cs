@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+namespace RPGCharacterAnimationPack
+{
+
 public class CameraController : MonoBehaviour
 {
 	GameObject cameraTarget;
@@ -64,4 +67,6 @@ public class CameraController : MonoBehaviour
 	{
 		lastPosition = transform.position;
 	}
+}
+
 }
