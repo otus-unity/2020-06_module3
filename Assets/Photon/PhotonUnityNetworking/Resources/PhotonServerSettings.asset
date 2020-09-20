@@ -37,6 +37,12 @@ MonoBehaviour:
   - Fire
   - RespawnSpaceship
   - DamageRPC
+  - GiveAmmoRPC
+  - CollectAmmoRPC
+  - RespawnAmmoRPC
+  - CollectHealthRPC
+  - GiveHealthRPC
+  - RespawnHealthRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
