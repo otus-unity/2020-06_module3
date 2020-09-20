@@ -91,7 +91,7 @@ public class BotUtility : MonoBehaviour
 
     public bool IsNavigating()
     {
-        if (navMeshAgent.isStopped)
+        if (navMeshAgent == null || navMeshAgent.isStopped)
             return false;
 
         if (!navMeshAgent.pathPending &&
