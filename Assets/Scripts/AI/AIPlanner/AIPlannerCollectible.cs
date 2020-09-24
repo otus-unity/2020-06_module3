@@ -1,4 +1,3 @@
-/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,16 +11,13 @@ public class AIPlannerCollectible : MonoBehaviour
     AmmoBox ammoBox;
     HealthBox healthBox;
 
-    void Awake()
+    void Start()
     {
         ammoBox = GetComponent<AmmoBox>();
         healthBox = GetComponent<HealthBox>();
 
         traitComponent = GetComponent<TraitComponent>();
-    }
 
-    void Start()
-    {
         UpdateParams();
     }
 
@@ -39,4 +35,3 @@ public class AIPlannerCollectible : MonoBehaviour
             collectible.SetValue("Active", healthBox.IsActive);
     }
 }
-*/

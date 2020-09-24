@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 785606876922470761}
   - component: {fileID: 785606876922470762}
   - component: {fileID: 785606876922470763}
+  - component: {fileID: 6691206371782884455}
+  - component: {fileID: 4609939102724162755}
   m_Layer: 0
   m_Name: HealthBox
   m_TagString: Untagged
@@ -116,6 +118,57 @@ MonoBehaviour:
   visual: {fileID: 783633594166736345}
   amount: 50
   respawnTime: 5
+--- !u!114 &6691206371782884455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785606876922470764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0b78b177b99a747be400cfbced69d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4609939102724162755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785606876922470764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4163c4525e1464b2d87e13978b85c02d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ObjectData:
+    m_Name: HealthBox
+    m_TraitData:
+    - m_TraitDefinition: {fileID: 11400000, guid: fed3f1d4ba6e9b64287256709176dca0,
+        type: 2}
+      m_FieldValues:
+      - m_Name: Provides
+        m_BoolValue: 0
+        m_FloatValue: 0
+        m_IntValue: 0
+        m_StringValue: 
+        m_ObjectValue: {fileID: 0}
+      - m_Name: Amount
+        m_BoolValue: 0
+        m_FloatValue: 0
+        m_IntValue: 50
+        m_StringValue: 
+        m_ObjectValue: {fileID: 0}
+    - m_TraitDefinition: {fileID: 11400000, guid: 9d24b90158d644873a4d488182380074,
+        type: 2}
+      m_FieldValues:
+      - m_Name: Transform
+        m_BoolValue: 0
+        m_FloatValue: 0
+        m_IntValue: 0
+        m_StringValue: 
+        m_ObjectValue: {fileID: 785606876922470759}
 --- !u!1001 &785606876484432793
 PrefabInstance:
   m_ObjectHideFlags: 0
